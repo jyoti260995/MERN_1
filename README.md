@@ -1,72 +1,92 @@
-# Smart Audit Pipeline
+# 🚀 Smart Audit Pipeline
 
-An AI-powered Financial Audit Pipeline built using the MERN stack. The application automates journal entry processing by performing AI enrichment, risk assessment, anomaly detection, metadata management, and similarity search through a modern React frontend and Node.js backend.
+<p align="center">
 
----
+![Node.js](https://img.shields.io/badge/Node.js-22.x-339933?logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-Backend-000000?logo=express&logoColor=white)
+![React](https://img.shields.io/badge/React-Class%20Components-61DAFB?logo=react&logoColor=black)
+![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?logo=mongodb&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952B3?logo=bootstrap&logoColor=white)
+![Assessment](https://img.shields.io/badge/SmartAudit-Engineering%20Assessment-blue)
 
-## Project Overview
+</p>
 
-The Smart Audit Pipeline is designed to simulate an intelligent auditing workflow.
-
-Each journal entry passes through an asynchronous enrichment pipeline where it is analyzed for:
-
-- Risk Score
-- Risk Level
-- Anomaly Detection
-- Semantic Vector
-- Financial Vector
-- Entity Vector
-
-The application also provides dashboard analytics, metadata management, similarity search, and complete CRUD functionality.
+An **AI-powered Financial Audit Pipeline** built using the **MERN Stack**. The application simulates an intelligent auditing workflow by asynchronously enriching journal entries with AI-generated **risk scoring**, **anomaly detection**, **metadata management**, and **vector similarity search**.
 
 ---
 
-# Features
+# 📖 Project Overview
+
+Financial organizations process thousands of journal entries every day. Manual auditing is time-consuming, expensive, and prone to human error.
+
+This project demonstrates how an **event-driven AI enrichment pipeline** can analyze journal entries asynchronously without affecting transactional performance.
+
+Each journal entry is automatically enriched with:
+
+- ✅ Risk Score
+- ✅ Risk Level
+- ✅ Anomaly Detection
+- ✅ Semantic Vector
+- ✅ Financial Vector
+- ✅ Entity Vector
+
+The system also provides:
+
+- Dashboard Analytics
+- Journal Entry Management
+- Metadata Updates
+- Similarity Search
+- Background AI Processing
+- Complete CRUD Operations
+
+---
+
+# ✨ Features
 
 ## Backend
 
-- CRUD APIs
-- Repository-Service-Controller Architecture
+- RESTful CRUD APIs
+- ES6 Class-based Architecture
+- Repository-Service-Controller Pattern
 - MongoDB with Mongoose
 - Background AI Enrichment Worker
-- Risk Score Calculation
+- Automatic Risk Score Calculation
 - Risk Level Classification
-- Anomaly Detection
+- AI-based Anomaly Detection
 - Semantic Vector Generation
 - Financial Vector Generation
 - Entity Vector Generation
-- Dashboard Analytics API
+- Dashboard Statistics API
 - Similarity Search API
 - Metadata Update API
-- Model Migration Script
+- Database Migration Script
 - Risk Score Update Script
 
 ---
 
 ## Frontend
 
-- Dashboard
-- Create Journal Entry
-- View Journal Entry
-- Delete Journal Entry
+- Dashboard Overview
+- Journal Entry Management
+- Entry Details Modal
 - Metadata Update
+- Delete Journal Entry
 - Similarity Search
-- Strategy Selection
-- Bootstrap UI
-- Responsive Layout
+- Responsive Bootstrap Interface
+- React Class Components
 
 ---
 
-# Technology Stack
+# 🛠 Technology Stack
 
-## Frontend
+### Frontend
 
-- React
+- React (Class Components)
 - JavaScript (ES6)
 - Axios
 - Bootstrap 5
 
-## Backend
+### Backend
 
 - Node.js
 - Express.js
@@ -75,74 +95,169 @@ The application also provides dashboard analytics, metadata management, similari
 
 ---
 
-# Project Structure
+# 🏗 System Architecture
 
+```text
+                  React Frontend
+                         │
+                         ▼
+                 Express REST API
+                         │
+                         ▼
+                  Controller Layer
+                         │
+                         ▼
+                    Service Layer
+                         │
+                         ▼
+                  Repository Layer
+                         │
+                         ▼
+                      MongoDB
+                         │
+                         ▼
+              Background AI Worker
+                         │
+                         ▼
+                AI Enrichment Engine
+                         │
+      ┌────────────┬──────────────┬──────────────┐
+      ▼            ▼              ▼
+ Risk Score   Anomaly Detection   Vector Generation
 ```
-MERN_1/
+
+---
+
+# 🔄 Application Workflow
+
+```text
+Create Journal Entry
+        │
+        ▼
+ Store in MongoDB
+        │
+        ▼
+ Background AI Worker
+        │
+        ▼
+ Risk Score Calculation
+        │
+        ▼
+ Anomaly Detection
+        │
+        ▼
+ Vector Generation
+        │
+        ▼
+ Dashboard Analytics
+        │
+        ▼
+ Similarity Search
+        │
+        ▼
+ Metadata Review
+```
+
+---
+
+# 📸 Application Screenshots
+
+## Dashboard Overview
+
+The dashboard provides a complete overview of the audit pipeline, including journal entry statistics, processing status, AI-generated risk distribution, anomaly count, journal management, and similarity search.
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## Journal Entry Management
+
+The Journal Entries section displays all financial transactions with company information, transaction amount, AI-generated risk level, processing status, and available actions.
+
+![Journal Entries](screenshots/journal-table.png)
+
+---
+
+## Journal Entry Details & Metadata
+
+View complete journal information, AI-generated risk score, detected anomalies, workflow status, and auditor comments. Metadata can be updated directly from this interface.
+
+![Entry Details](screenshots/entry-details.png)
+
+---
+
+## AI Similarity Search
+
+Search similar journal entries using Semantic, Financial, and Entity similarity strategies to identify related financial transactions.
+
+![Similarity Search](screenshots/similarity-search.png)
+
+---
+
+# 📂 Project Structure
+
+```text
+MERN_1
 │
-├── README.md
-│
-├── backend/
-│   ├── README.md
-│   ├── .env.example
-│   ├── config/
-│   ├── controllers/
-│   ├── models/
-│   ├── repositories/
-│   ├── routes/
-│   ├── scripts/
-│   ├── services/
-│   ├── workers/
+├── backend
+│   ├── config
+│   ├── controllers
+│   ├── models
+│   ├── repositories
+│   ├── routes
+│   ├── scripts
+│   ├── services
+│   ├── workers
 │   ├── package.json
 │   └── index.js
 │
-├── frontend/
-│   ├── README.md
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── services/
+├── frontend
+│   ├── public
+│   ├── src
+│   │   ├── components
+│   │   ├── services
 │   │   ├── App.js
 │   │   └── index.js
 │   └── package.json
 │
+├── screenshots
+│   ├── dashboard.png
+│   ├── journal-table.png
+│   ├── entry-details.png
+│   └── similarity-search.png
+│
+├── README.md
 └── .gitignore
 ```
 
 ---
 
-# Installation
+# ⚙ Installation
 
-## Clone Repository
-
-```bash
-git clone <repository-url>
-```
-
-Move into the project directory
+## Clone the Repository
 
 ```bash
+git clone https://github.com/jyoti260995/MERN_1.git
 cd MERN_1
 ```
 
 ---
 
-# Backend Setup
+## Backend Setup
 
 ```bash
 cd backend
-
 npm install
 ```
 
-Create `.env`
+Create a `.env` file
 
 ```env
 PORT=2000
 MONGO_URI=mongodb://127.0.0.1:27017/audit-pipeline
 ```
 
-Run backend
+Run the backend
 
 ```bash
 npm run dev
@@ -150,23 +265,21 @@ npm run dev
 
 ---
 
-# Frontend Setup
+## Frontend Setup
 
 ```bash
 cd frontend
-
 npm install
-
 npm start
 ```
 
-Application runs on
+Frontend:
 
 ```
 http://localhost:3000
 ```
 
-Backend runs on
+Backend:
 
 ```
 http://localhost:2000
@@ -174,102 +287,46 @@ http://localhost:2000
 
 ---
 
-# Application Workflow
-
-```
-Create Journal Entry
-          │
-          ▼
-Store in MongoDB
-          │
-          ▼
-Background AI Worker
-          │
-          ▼
-Risk Analysis
-          │
-          ▼
-Anomaly Detection
-          │
-          ▼
-Vector Generation
-          │
-          ▼
-Dashboard
-          │
-          ▼
-Similarity Search
-          │
-          ▼
-Metadata Review
-```
-
----
-
-# Available Scripts
+# 📜 Available Scripts
 
 ## Backend
 
-```bash
-npm run dev
-```
-
-Start development server
-
-```bash
-npm run seed
-```
-
-Populate sample journal entries
-
-```bash
-npm run migrate:models
-```
-
-Upgrade existing entries from v1 to v2
-
-```bash
-npm run update:risk
-```
-
-Recalculate risk scores
+| Command | Description |
+|----------|-------------|
+| `npm run dev` | Start development server |
+| `npm run seed` | Populate sample journal entries |
+| `npm run migrate:models` | Upgrade existing journal entries |
+| `npm run update:risk` | Recalculate risk scores |
 
 ---
 
 ## Frontend
 
-```bash
-npm start
-```
-
-Start React application
-
-```bash
-npm run build
-```
-
-Build production application
+| Command | Description |
+|----------|-------------|
+| `npm start` | Start React application |
+| `npm run build` | Create production build |
 
 ---
 
-# API Endpoints
+# 📡 REST API Endpoints
 
 | Method | Endpoint | Description |
-|----------|----------|-------------|
-| POST | /api/entries | Create Journal Entry |
-| GET | /api/entries | Get All Entries |
-| GET | /api/entries/:id | Get Entry |
-| PUT | /api/entries/:id | Update Entry |
-| DELETE | /api/entries/:id | Delete Entry |
-| PUT | /api/entries/:id/metadata | Update Metadata |
-| GET | /api/entries/dashboard/stats | Dashboard Statistics |
-| POST | /api/entries/search/similar | Similarity Search |
+|---------|----------|-------------|
+| POST | `/api/entries` | Create Journal Entry |
+| GET | `/api/entries` | Get All Journal Entries |
+| GET | `/api/entries/:id` | Get Journal Entry |
+| PUT | `/api/entries/:id` | Update Journal Entry |
+| DELETE | `/api/entries/:id` | Delete Journal Entry |
+| PUT | `/api/entries/:id/metadata` | Update Metadata |
+| GET | `/api/entries/dashboard/stats` | Dashboard Statistics |
+| POST | `/api/entries/search/similar` | Similarity Search |
 
 ---
 
-# AI Enrichment
+# 🤖 AI Enrichment Pipeline
 
-Each journal entry is automatically enriched with
+Every journal entry is automatically processed by the background worker to generate:
 
 - Risk Score
 - Risk Level
@@ -278,22 +335,32 @@ Each journal entry is automatically enriched with
 - Financial Vector
 - Entity Vector
 
-The enrichment runs asynchronously using a background worker.
+This asynchronous architecture keeps journal entry creation responsive while AI processing executes independently.
 
 ---
 
-# Future Improvements
+# 🚀 Future Improvements
 
-- User Authentication
+- JWT Authentication
+- Role-Based Access Control
 - Pagination
+- Advanced Filtering
 - Export Reports (Excel/PDF)
-- Advanced Filters
-- Real AI Embedding Models
-- Notifications
+- AI Embedding Models
+- Docker Support
+- CI/CD Pipeline
+- Email Notifications
 
 ---
 
-# Author
+# 👩‍💻 Author
 
 **Jyoti Rani**
 
+GitHub: **https://github.com/jyoti260995**
+
+---
+
+# 📄 SmartAudit Engineering Assessment
+
+This project was developed as part of the **SmartAudit Engineering Assessment**. It demonstrates an event-driven MERN application that combines asynchronous AI enrichment, anomaly detection, risk analysis, metadata management, and vector similarity search for intelligent financial auditing.
